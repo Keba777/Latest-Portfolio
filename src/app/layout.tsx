@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import NavBar from "@/components/NavBar";
+import Hero from "@/components/Home/Hero";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +23,15 @@ export default function RootLayout({
         <header className="flex justify-end pr-10 ">
           <ThemeSwitch />
         </header>
-        <main className="pt-10">{children}</main>
+        <main className="pt-10 grid grid-cols-3 gap-7">
+          <aside className="col-span-1">
+            <Hero />
+          </aside>
+          <div className="col-span-2">
+            <NavBar />
+            <div className="pt-8">{children}</div>
+          </div>
+        </main>
       </body>
     </html>
   );
