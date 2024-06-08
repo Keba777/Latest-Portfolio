@@ -17,8 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} px-28`}>
-        <header className="flex justify-end pr-10 pt-10">
+      <body className={`${inter.className} px-28 pt-10 p-16`}>
+        <header className="flex justify-end pr-10 ">
           <ThemeSwitch />
         </header>
         <main className="pt-10">{children}</main>
