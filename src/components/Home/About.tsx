@@ -50,7 +50,7 @@ const services = [
 
 const About = () => {
   return (
-    <div className="bg-common-white rounded-xl p-12">
+    <div >
       <div className="flex items-center space-x-4">
         <h2 className="text-common-black">About</h2>
         <hr className="w-1/3 border-t-2 border-theme-secondary" />

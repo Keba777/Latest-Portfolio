@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import NavBar from "@/components/NavBar";
-import Hero from "@/components/Home/Hero";
+import Hero from "@/components/home/Hero";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} px-28 pt-10 p-16`}>
-        <header className="flex justify-end pr-10 ">
+        <header className="flex justify-end pr-10">
           <ThemeSwitch />
         </header>
         <main className="pt-10 grid grid-cols-3 gap-7">
@@ -28,8 +28,12 @@ export default function RootLayout({
             <Hero />
           </aside>
           <div className="col-span-2">
-            <NavBar />
-            <div className="pt-8">{children}</div>
+            <nav>
+              <NavBar />
+            </nav>
+            <section className="bg-common-white rounded-xl p-12 mt-8">
+              {children}
+            </section>
           </div>
         </main>
       </body>
